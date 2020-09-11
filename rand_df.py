@@ -13,6 +13,7 @@ class rdf(pd.DataFrame):
         self.col_fn_dict = {
             'integers': self.gen_integer_col,
             'words': self.gen_word_col
+        }
 
         if gen_rdf:
             self.gen_random_df(nrows, ncols, col_dict)
