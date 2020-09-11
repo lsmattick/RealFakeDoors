@@ -18,8 +18,6 @@ class RandomDataFrame(pd.DataFrame):
         if gen_rdf:
             self.gen_random_df(nrows, ncols, col_dict)
 
-
-
     def random_string(self):
         """
         Genearte a random string of characters of lenght 4.
