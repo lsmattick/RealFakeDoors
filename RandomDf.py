@@ -29,25 +29,30 @@ class RandomDataFrame(pd.DataFrame):
 
     def gen_integer_col(self, n):
         """
-        Generate a list of lenght n of random integers between 1000 and 999.
+        Generate a list of lenght n of random integers between 1000 and 9999.
         """
         return [random.randint(1000, 9999) for x in range(n)]
 
     def gen_word_col(self, n):
         """
-        Generate a list of lenght n of random strings of using the random_string
+        Generate a list of lenght n of random strings using the random_string
         method.
         """
         return [self.random_string() for x in range(n)]
 
     def gen_random_df(self, nrows=10, ncols=2, col_dict=None):
         """
-        Generate a random DataFrame with nrows rows and ncols cols. If a
+        Generate a random DataFrame where nrows and ncols are the number of rows
+        and columns desired. col_dict speficifes the column names and types. If
         col_dict is not specified, the column names will default to colx where x
-        is an integet, and col types will be random. The col types available are
-        listed in the col_type_repository. Each col type is assigned a
-        generating fucntion in self.col_fn_dict in the init. The col_dict should
-        be a dict with column names as the keys and column types as the values.
+        is an integet, and col types will be random.
+
+        col_dict is a dict with column names as keys and column types as values.
+
+        The col types available are listed in the col_type_repository.
+
+        Each col type is assigned a generating fucntion in self.col_fn_dict in
+        the init. 
         """
         col_type_repository = ['integers', 'words']
 
