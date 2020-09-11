@@ -1,5 +1,4 @@
- 
-import pandas as pd
+ import pandas as pd
 import random
 import string
 
@@ -18,8 +17,6 @@ class RandomDataFrame(pd.DataFrame):
 
         if gen_rdf:
             self.gen_random_df(nrows, ncols, col_dict)
-
-
 
     def random_string(self):
         """
