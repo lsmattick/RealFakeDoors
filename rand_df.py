@@ -4,6 +4,9 @@ import string
 
 
 class rdf(pd.DataFrame):
+    """
+    Insert Doc String Here.
+    """
     def __init__(self, gen_rdf=False, nrows=10, ncols=2, col_dict=None, **kwargs):
         super().__init__(**kwargs)
         if gen_rdf:
