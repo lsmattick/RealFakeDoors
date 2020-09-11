@@ -3,7 +3,7 @@ import random
 import string
 
 
-class rdf(pd.DataFrame):
+class RandomDataFrame(pd.DataFrame):
     """
     Insert Doc String Here.
     """
