@@ -9,13 +9,15 @@ class rdf(pd.DataFrame):
     """
     def __init__(self, gen_rdf=False, nrows=10, ncols=2, col_dict=None, **kwargs):
         super().__init__(**kwargs)
-        if gen_rdf:
-            self.gen_random_df(nrows, ncols, col_dict)
 
         self.col_fn_dict = {
             'integers': self.gen_integer_col,
             'words': self.gen_word_col
-        }
+
+        if gen_rdf:
+            self.gen_random_df(nrows, ncols, col_dict)
+
+
 
     def random_string(self):
         """
