@@ -68,7 +68,7 @@ class RandomDataFrame(pd.DataFrame):
         The col types available are listed in the col_type_dict.
 
         Each col type is assigned a generating fucntion in self.col_type_dict in
-        the init. 
+        the init.
         """
 
         if not date_range:
@@ -99,3 +99,13 @@ class RandomDataFrame(pd.DataFrame):
         """
         for col_name, col_type in col_dict.items():
             self[col_name] = self.col_type_dict[col_type](len(self))
+
+    def add_foo_columns(self, num_cols=1):
+        """
+        Add num_cols amount of foo columns
+        """
+
+        for i in num_cols:
+            self['foo_{}'.format(i)] = 'foo'
+
+    
