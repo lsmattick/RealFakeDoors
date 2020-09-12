@@ -6,7 +6,7 @@ import string
 
 class RandomDataFrame(pd.DataFrame):
     """
-    Insert Doc String Here.
+    Insert Doc String Here. Sup Dude
     """
     def __init__(self, gen_rdf=False, nrows=10, ncols=3, col_dict=None,
         date_range=None, **kwargs):
