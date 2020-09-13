@@ -107,5 +107,3 @@ class RandomDataFrame(pd.DataFrame):
 
         for i in num_cols:
             self['foo_{}'.format(i)] = 'foo'
-
-    
