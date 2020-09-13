@@ -105,5 +105,5 @@ class RandomDataFrame(pd.DataFrame):
         Add num_cols amount of foo columns
         """
 
-        for i in num_cols:
+        for i in range(num_cols):
             self['foo_{}'.format(i)] = 'foo'
